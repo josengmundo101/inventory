@@ -1,0 +1,40 @@
+<template>
+  <v-container class="container" fluid>
+    <v-card class="card mx-auto pa-12" elevation="15" width="500">
+      <v-card-item class="text-center">
+        <img :src="logo" alt="" width="150" class="mt-5" />
+        <v-card-title class="text-h5 text-white font-weight-bold mb-2"> Welcome Back </v-card-title>
+
+        <v-card-subtitle class="text-white">
+          Please enter you Account
+          <RouterLink to="/register" />
+        </v-card-subtitle>
+      </v-card-item>
+
+      <LoginForm />
+    </v-card>
+  </v-container>
+</template>
+
+<script setup>
+import logo from '@/assets/images/logo.png'
+import LoginForm from '@/components/LoginForm.vue'
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+  width: 100vw;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+.card {
+  background-color: #212121;
+  border-radius: 25px;
+}
+</style>
