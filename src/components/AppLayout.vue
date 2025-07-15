@@ -16,3 +16,5 @@ const drawer = ref(true) // controls navigation drawer
     </v-main>
   </v-app>
 </template>
+
+<style scope></style>

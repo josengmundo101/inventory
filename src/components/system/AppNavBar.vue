@@ -6,7 +6,7 @@ const emit = defineEmits(['update:drawer'])
 </script>
 
 <template>
-  <v-app-bar flat color="white" app class="px-4">
+  <v-app-bar flat color="transparent" app class="px-4">
     <!-- Logo on the left -->
     <v-app-bar-nav-icon @click.stop="emit('update:drawer', !props.drawer)" />
 
@@ -21,7 +21,7 @@ const emit = defineEmits(['update:drawer'])
         </v-avatar>
       </template>
       <v-list>
-        <v-btn color="danger" dark> Logout </v-btn>
+        <v-btn class="font-weight-bold text-body-1" color="red" dark> Logout </v-btn>
       </v-list>
     </v-menu>
   </v-app-bar>

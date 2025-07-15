@@ -1,5 +1,10 @@
 <template>
-  <v-navigation-drawer v-model="drawerLocal" @update:modelValue="emit('update:drawer', $event)" app>
+  <v-navigation-drawer
+    color="grey-darken-4"
+    v-model="drawerLocal"
+    @update:modelValue="emit('update:drawer', $event)"
+    app
+  >
     <div class="logo d-flex justify-center align-center">
       <img :src="logo" alt="Logo" width="150" />
     </div>
@@ -51,7 +56,7 @@ const filteredMenuItems = computed(() => menuItems.filter((item) => !item.childr
 // Grouped submenu
 const groupedMenu = {
   title: 'People',
-  icon: 'mdi-folder',
+  icon: 'mdi-group-people',
   children: [
     { title: 'Suppliers', icon: 'mdi-truck', to: '/admin/supplier' },
     { title: 'Customers', icon: 'mdi-account-multiple', to: '/admin/customers' },
