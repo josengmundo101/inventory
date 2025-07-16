@@ -1,8 +1,8 @@
 <template>
-  <v-card class="mx-auto my-8 d-flex justify-space-between align-center pa-6" flat height="200">
+  <v-card class="mx-auto rounded-lg d-flex justify-space-between align-center" flat>
     <!-- LEFT SIDE: Text Content -->
     <div class="text-content">
-      <v-card-title class="text-h5 mb-3">
+      <v-card-title class="text-h6 mb-3">
         Welcome to The Inventory Dashboard, Super Admin!
       </v-card-title>
 

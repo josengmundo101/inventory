@@ -1,36 +1,43 @@
 <script setup>
 import CardGreeting from './component/CardGreeting.vue'
 import CardBox from './component/CardBox.vue'
+import LowStock from './component/LowStock.vue'
+import GraphChart from './component/GraphChart.vue'
 // You can import a donut chart component here later
 // import DonutChart from './component/DonutChart.vue'
 </script>
 
 <template>
-  <v-container fluid class="pa-6">
+  <v-container fluid class="px-15">
     <!-- Top Section: Greeting + 2 Stat Cards -->
-    <v-row>
+    <v-row dense>
       <!-- Greeting Message -->
-      <v-col cols="12" md="8">
+      <v-col cols="12" md="7">
         <CardGreeting />
       </v-col>
 
       <!-- Top Stats -->
-      <v-col cols="12" md="4">
-        <v-row>
-          <v-col cols="6">
+      <v-col cols="12" md="5">
+        <v-row dense>
+          <v-col cols="4">
+            <CardBox flat icon="mdi-sale" iconColor="red" count="1290" description="Total Sales" />
+          </v-col>
+          <v-col cols="4">
             <CardBox
-              icon="mdi-account-group"
+              flat
+              icon="mdi-package"
               iconColor="primary"
-              count="26063"
-              description="Total Parents"
+              count="150"
+              description="Number of Products"
             />
           </v-col>
-          <v-col cols="6">
+          <v-col cols="4">
             <CardBox
-              icon="mdi-account-tie"
+              flat
+              icon="mdi-account-group"
               iconColor="red"
               count="1290"
-              description="Total Lawyers"
+              description="Number of Customer"
             />
           </v-col>
         </v-row>
@@ -38,47 +45,16 @@ import CardBox from './component/CardBox.vue'
     </v-row>
 
     <!-- Middle Section: Stat Cards + Donut Chart -->
-    <v-row class="mt-6">
-      <!-- 6 Stat Cards -->
+    <v-row class="mt-6" dense no-gutter>
       <v-col cols="12" md="6">
-        <v-row>
-          <v-col cols="6" md="4">
-            <CardBox icon="mdi-chart-bar" iconColor="blue" count="36175" description="Incidents" />
-          </v-col>
-          <v-col cols="6" md="4">
-            <CardBox icon="mdi-alert" iconColor="purple" count="729" description="Litigations" />
-          </v-col>
-          <v-col cols="6" md="4">
-            <CardBox
-              icon="mdi-account-alert"
-              iconColor="orange"
-              count="60817"
-              description="Cases"
-            />
-          </v-col>
-          <v-col cols="6" md="4">
-            <CardBox icon="mdi-calendar" iconColor="teal" count="159267" description="Events" />
-          </v-col>
-          <v-col cols="6" md="4">
-            <CardBox
-              icon="mdi-file-document"
-              iconColor="green"
-              count="2137"
-              description="Reports"
-            />
-          </v-col>
-          <v-col cols="6" md="4">
-            <CardBox
-              icon="mdi-briefcase-check"
-              iconColor="indigo"
-              count="31525"
-              description="Resolved"
-            />
-          </v-col>
-        </v-row>
+        <LowStock />
       </v-col>
-
-      <!-- Donut Chart Placeholder -->
+      <v-col cols="12" md="6">
+        <v-card class="pa-4" height="100%" flat>
+          <div class="text-subtitle-1 font-weight-bold mb-2">Incidents Per Type</div>
+          <GraphChart />
+        </v-card>
+      </v-col>
     </v-row>
   </v-container>
 </template>
