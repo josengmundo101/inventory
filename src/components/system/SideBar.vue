@@ -44,7 +44,7 @@ import logo from '@/assets/images/logo.png'
 
 const menuItems = [
   { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/admin/dashboard' },
-  { title: 'Products', icon: 'mdi-account-group', to: '/admin/products' },
+  { title: 'Products', icon: 'mdi-package', to: '/admin/products' },
   { title: 'Categories', icon: 'mdi-credit-card', to: '/admin/categories' },
   { title: 'Sales', icon: 'mdi-chart-bar', to: '/admin/sales' },
   { title: 'Report', icon: 'mdi-file-chart', to: '/admin/report' },

@@ -51,7 +51,7 @@ import GraphChart from './component/GraphChart.vue'
       </v-col>
       <v-col cols="12" md="6">
         <v-card class="pa-4" height="100%" flat>
-          <div class="text-subtitle-1 font-weight-bold mb-2">Incidents Per Type</div>
+          <div class="text-h5 font-weight-bold mb-2">Incidents Per Type</div>
           <GraphChart />
         </v-card>
       </v-col>
