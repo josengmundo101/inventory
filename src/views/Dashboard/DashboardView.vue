@@ -3,8 +3,6 @@ import CardGreeting from './component/CardGreeting.vue'
 import CardBox from './component/CardBox.vue'
 import LowStock from './component/LowStock.vue'
 import GraphChart from './component/GraphChart.vue'
-// You can import a donut chart component here later
-// import DonutChart from './component/DonutChart.vue'
 </script>
 
 <template>
