@@ -9,11 +9,12 @@ const searchQuery = ref('')
 </script>
 
 <template>
-  <v-container>
-    <div class="dashboard-overview mt-6 mb-8">
-      <h1 class="text-h4 font-weight-bold tracking-tight fade-in delay-50">Product</h1>
+  <v-container class="px-15" fluid>
+    <div class="mt-6 mb-8">
+      <h1 class="text-h4 font-weight-bold fade-in delay-50">Product</h1>
       <p class="text-body-2 text-grey-darken-1 max-width fade-in delay-100">
-        Manage and track Product Record.
+        The product list effectively dictates product presentation and provides space to list your
+        products and offering in the most appealing way.
       </p>
     </div>
 

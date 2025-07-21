@@ -4,15 +4,15 @@
       <v-table density="comfortable" hover>
         <thead>
           <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Code</th>
-            <th>Category</th>
-            <th>Brand</th>
-            <th>Price</th>
-            <th>Unit</th>
-            <th>Quantity</th>
-            <th>Action</th>
+            <th class="text-uppercase">Image</th>
+            <th class="text-uppercase">Name</th>
+            <th class="text-uppercase">Code</th>
+            <th class="text-uppercase">Category</th>
+            <th class="text-uppercase">Brand</th>
+            <th class="text-uppercase">Price</th>
+            <th class="text-uppercase">Unit</th>
+            <th class="text-uppercase">Quantity</th>
+            <th class="text-uppercase">Action</th>
           </tr>
         </thead>
         <tbody>
