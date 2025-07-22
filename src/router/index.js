@@ -4,6 +4,7 @@ import DashboardView from '@/views/Dashboard/DashboardView.vue'
 import AppLayout from '@/components/AppLayout.vue'
 import ProductView from '@/views/Product/ProductView.vue'
 import AddProduct from '@/views/Product/component/AddProduct.vue'
+import ViewProduct from '@/views/Product/component/ViewProduct.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,7 @@ const router = createRouter({
         { path: 'dashboard', name: 'dashboard', component: DashboardView },
         { path: 'products', name: 'products', component: ProductView },
         { path: 'products/add', name: 'add-products', component: AddProduct },
+        { path: 'products/view', name: 'view-products', component: ViewProduct },
       ],
     },
   ],

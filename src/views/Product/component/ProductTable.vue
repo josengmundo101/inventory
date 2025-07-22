@@ -4,31 +4,51 @@
       <v-table density="comfortable" hover>
         <thead>
           <tr>
-            <th class="text-uppercase">Image</th>
-            <th class="text-uppercase">Name</th>
-            <th class="text-uppercase">Code</th>
-            <th class="text-uppercase">Category</th>
-            <th class="text-uppercase">Brand</th>
-            <th class="text-uppercase">Price</th>
-            <th class="text-uppercase">Unit</th>
-            <th class="text-uppercase">Quantity</th>
-            <th class="text-uppercase">Action</th>
+            <th class="text-uppercase text-center">Image</th>
+            <th class="text-uppercase text-center">Name</th>
+            <th class="text-uppercase text-center">Code</th>
+            <th class="text-uppercase text-center">Category</th>
+            <th class="text-uppercase text-center">Brand</th>
+            <th class="text-uppercase text-center">Price</th>
+            <th class="text-uppercase text-center">Unit</th>
+            <th class="text-uppercase text-center">Quantity</th>
+            <th class="text-uppercase text-center">Action</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="(item, index) in products" :key="index">
-            <td class="pa-5"><v-img :src="item.image" max-width="50" height="50" cover></v-img></td>
-            <td class="pa-5">{{ item.name }}</td>
-            <td class="pa-5">{{ item.code }}</td>
-            <td class="pa-5">{{ item.category }}</td>
-            <td class="pa-5">{{ item.brand }}</td>
-            <td class="pa-5">{{ item.price }}</td>
-            <td class="pa-5">{{ item.unit }}</td>
-            <td class="pa-5">{{ item.quantity }}</td>
-            <td class="pa-5">
-              <v-icon small class="me-2 text-primary" @click="showProduct(item)">mdi-eye</v-icon>
-              <v-icon small class="me-2 text-warning" @click="editProduct(item)">mdi-pencil</v-icon>
-              <v-icon small class="text-error" @click="deleteProduct(item)">mdi-delete</v-icon>
+            <td class="pa-5 text-center">
+              <v-img :src="item.image" max-width="50" height="50" cover></v-img>
+            </td>
+            <td class="pa-5 text-center">{{ item.name }}</td>
+            <td class="pa-5 text-center">{{ item.code }}</td>
+            <td class="pa-5 text-center">{{ item.category }}</td>
+            <td class="pa-5 text-center">{{ item.brand }}</td>
+            <td class="pa-5 text-center">{{ item.price }}</td>
+            <td class="pa-5 text-center">{{ item.unit }}</td>
+            <td class="pa-5 text-center">{{ item.quantity }}</td>
+            <td class="pa-5 text-center">
+              <v-btn class="rounded-xl" flat
+                ><RouterLink to="products/view"
+                  ><v-icon small class="text-primary" @click="showProduct(item)"
+                    >mdi-eye</v-icon
+                  ></RouterLink
+                ></v-btn
+              >
+              <v-btn class="rounded-xl" flat
+                ><RouterLink
+                  ><v-icon small class="text-warning" @click="editProduct(item)"
+                    >mdi-pencil</v-icon
+                  ></RouterLink
+                ></v-btn
+              >
+              <v-btn class="rounded-xl" flat
+                ><RouterLink>
+                  <v-icon small class="text-error" @click="deleteProduct(item)"
+                    >mdi-delete</v-icon
+                  ></RouterLink
+                ></v-btn
+              >
             </td>
           </tr>
         </tbody>
