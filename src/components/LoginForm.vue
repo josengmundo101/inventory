@@ -11,6 +11,7 @@
     <v-text-field
       hint="Enter your password to access this website"
       class="text-white"
+      color="gray-lighten-1"
       v-model="password"
       label="Password"
       type="input"

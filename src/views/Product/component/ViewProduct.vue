@@ -107,10 +107,10 @@ td {
 }
 
 .b-btn {
-  transition: transform 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
 }
 
 .b-btn:hover {
-  transform: scale(1.5, 1.5);
+  background-color: rgb(211, 210, 210);
 }
 </style>

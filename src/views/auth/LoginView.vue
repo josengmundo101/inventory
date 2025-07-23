@@ -3,7 +3,7 @@
     <v-card class="card mx-auto pa-12" elevation="15" width="500">
       <v-card-item class="text-center">
         <img :src="logo" alt="" width="150" class="mt-5" />
-        <v-card-title class="text-h5 text-white font-weight-bold mb-2"> Welcome Back </v-card-title>
+        <v-card-title class="text-h4 text-white font-weight-bold"> Welcome Back </v-card-title>
 
         <v-card-subtitle class="text-white">
           Please enter you Account

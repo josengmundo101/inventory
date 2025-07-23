@@ -30,23 +30,17 @@
             <td class="pa-5 text-center">
               <v-btn class="rounded-xl" flat
                 ><RouterLink to="products/view"
-                  ><v-icon small class="text-primary" @click="showProduct(item)"
-                    >mdi-eye</v-icon
-                  ></RouterLink
+                  ><v-icon small class="text-primary">mdi-eye</v-icon></RouterLink
                 ></v-btn
               >
               <v-btn class="rounded-xl" flat
-                ><RouterLink
-                  ><v-icon small class="text-warning" @click="editProduct(item)"
-                    >mdi-pencil</v-icon
-                  ></RouterLink
+                ><RouterLink to="products/edit"
+                  ><v-icon small class="text-warning">mdi-pencil</v-icon></RouterLink
                 ></v-btn
               >
               <v-btn class="rounded-xl" flat
                 ><RouterLink>
-                  <v-icon small class="text-error" @click="deleteProduct(item)"
-                    >mdi-delete</v-icon
-                  ></RouterLink
+                  <v-icon small class="text-error">mdi-delete</v-icon></RouterLink
                 ></v-btn
               >
             </td>
@@ -123,18 +117,6 @@ const products = ref([
   },
   // Add more products as needed
 ])
-
-const showProduct = (item) => {
-  console.log('Show:', item)
-}
-
-const editProduct = (item) => {
-  console.log('Edit:', item)
-}
-
-const deleteProduct = (item) => {
-  console.log('Delete:', item)
-}
 </script>
 
 <style scoped>

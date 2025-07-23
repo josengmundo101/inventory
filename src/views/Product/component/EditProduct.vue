@@ -6,7 +6,7 @@ import ReusableForm from './reusableForm/ReusableForm.vue'
   <v-container class="px-15" fluid flat>
     <v-card class="pa-4" flat>
       <div class="mb-5 d-flex justify-space-between align-center">
-        <v-card-title class="text-h4 font-weight-bold">Add Product</v-card-title>
+        <v-card-title class="text-h4 font-weight-bold">Edit Product</v-card-title>
         <RouterLink to="/admin/products"
           ><v-btn color="primary" class="mx-5"> Back </v-btn></RouterLink
         >
