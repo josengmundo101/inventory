@@ -2,8 +2,7 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import SearchBar from '../../components/SearchBar.vue'
-import LowStock from '../Dashboard/component/LowStock.vue'
-import ProductTable from './component/ProductTable.vue'
+import CategoryTable from './components/CategoryTable.vue'
 
 const searchQuery = ref('')
 </script>
@@ -11,10 +10,10 @@ const searchQuery = ref('')
 <template>
   <v-container class="px-15" fluid>
     <div class="mt-6 mb-8">
-      <h1 class="text-h4 font-weight-bold fade-in delay-50">Product List</h1>
+      <h1 class="text-h4 font-weight-bold fade-in delay-50">Category List</h1>
       <p class="text-body-2 text-grey-darken-1 max-width fade-in delay-100">
-        The product list effectively dictates product presentation and provides space to list your
-        products and offering in the most appealing way.
+        Use category list as to describe your overall core business from the provided list. Click
+        the name of the category where you want to add a list item. .
       </p>
     </div>
 
@@ -24,21 +23,21 @@ const searchQuery = ref('')
       </v-col>
 
       <v-col cols="12" sm="6" class="d-flex justify-end align-center">
-        <RouterLink to="products/add"
-          ><v-btn
-            class="btn text-subtitle-1 font-weight-regular rounded-lg text-none"
-            color="primary"
-            ><v-icon icon="mdi-package" start></v-icon>Add Product</v-btn
+        <RouterLink to="categories/add"
+          ><v-btn class="text-subtitle-1 font-weight-regular rounded-lg text-none" color="primary"
+            ><v-icon icon="mdi-package" start></v-icon>Add Category</v-btn
           ></RouterLink
         >
       </v-col>
     </v-row>
     <div class="mb-5">
-      <ProductTable />
+      <CategoryTable />
     </div>
-
-    <LowStock />
   </v-container>
 </template>
 
-<style scoped></style>
+<style scoped>
+.btn {
+  padding: 8px 24px;
+}
+</style>

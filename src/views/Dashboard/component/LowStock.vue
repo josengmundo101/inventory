@@ -1,8 +1,6 @@
 <template>
   <v-card class="pa-4 rounded-lg" height="100%" flat>
-    <v-card-title class="text-red-600 text-h5 font-weight-bold mb-2">
-      Low Stock Alerts
-    </v-card-title>
+    <v-card-title class="text-h5 font-weight-bold mb-2"> Low Stock Alerts </v-card-title>
 
     <!-- Scrollable container -->
     <div class="table-scroll">

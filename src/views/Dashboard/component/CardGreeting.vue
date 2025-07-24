@@ -1,21 +1,20 @@
 <template>
-  <v-card class="mx-auto rounded-lg d-flex justify-space-between align-center" flat>
-    <!-- LEFT SIDE: Text Content -->
-    <div class="text-content">
-      <v-card-title class="text-h6 mb-3">
-        Welcome to The Inventory Dashboard, Super Admin!
-      </v-card-title>
+  <v-card class="rounded-lg mx-auto pa-6" flat>
+    <v-row align="center" justify="space-between">
+      <!-- LEFT SIDE: Text Content -->
+      <v-col cols="12" md="8">
+        <v-card-title class="text-h6 mb-2"> Welcome to Dashboard, Super Admin! </v-card-title>
+        <v-card-text class="text-body-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </v-card-text>
+      </v-col>
 
-      <v-card-text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.
-      </v-card-text>
-    </div>
-
-    <!-- RIGHT SIDE: Image -->
-    <div class="image-container">
-      <img :src="greetingLogo" alt="Greeting" style="max-width: 200px; height: auto" />
-    </div>
+      <!-- RIGHT SIDE: Image -->
+      <v-col cols="12" md="4" class="d-flex justify-end">
+        <v-img :src="greetingLogo" alt="Greeting" max-width="150" class="mr-md-4" cover />
+      </v-col>
+    </v-row>
   </v-card>
 </template>
 

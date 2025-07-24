@@ -6,6 +6,10 @@ import ProductView from '@/views/Product/ProductView.vue'
 import AddProduct from '@/views/Product/component/AddProduct.vue'
 import ViewProduct from '@/views/Product/component/ViewProduct.vue'
 import EditProduct from '@/views/Product/component/EditProduct.vue'
+import CategoryPage from '@/views/Categories/CategoryPage.vue'
+import AddCategory from '@/views/Categories/components/AddCategory.vue'
+import ViewCategory from '@/views/Categories/components/ViewCategory.vue'
+import EditCategory from '@/views/Categories/components/EditCategory.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,6 +29,10 @@ const router = createRouter({
         { path: 'products/add', name: 'add-products', component: AddProduct },
         { path: 'products/view', name: 'view-products', component: ViewProduct },
         { path: 'products/edit', name: 'edit-products', component: EditProduct },
+        { path: 'categories', name: 'categories', component: CategoryPage },
+        { path: 'categories/add', name: 'add-categories', component: AddCategory },
+        { path: 'categories/view', name: 'view-categories', component: ViewCategory },
+        { path: 'categories/edit', name: 'edit-categories', component: EditCategory },
       ],
     },
   ],

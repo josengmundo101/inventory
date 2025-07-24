@@ -8,6 +8,10 @@
           label="Product Type *"
           :rules="[rules.required]"
           required
+          show-size
+          chips
+          rounded
+          variant="outlined"
         ></v-select>
       </v-col>
 
@@ -18,6 +22,10 @@
           label="Category *"
           :rules="[rules.required]"
           required
+          show-size
+          chips
+          rounded
+          variant="outlined"
         ></v-select>
       </v-col>
 
@@ -28,6 +36,10 @@
           placeholder="Enter Name"
           :rules="[rules.required]"
           required
+          show-size
+          chips
+          rounded
+          variant="outlined"
         ></v-text-field>
       </v-col>
 
@@ -38,6 +50,10 @@
           placeholder="Enter Code"
           :rules="[rules.required]"
           required
+          show-size
+          chips
+          rounded
+          variant="outlined"
         ></v-text-field>
       </v-col>
 
@@ -48,6 +64,10 @@
           label="Barcode Symbology *"
           :rules="[rules.required]"
           required
+          show-size
+          chips
+          rounded
+          variant="outlined"
         ></v-select>
       </v-col>
 
@@ -59,6 +79,10 @@
           placeholder="Enter Cost"
           :rules="[rules.required]"
           required
+          show-size
+          chips
+          rounded
+          variant="outlined"
         ></v-text-field>
       </v-col>
 
@@ -70,6 +94,10 @@
           placeholder="Enter Price"
           :rules="[rules.required]"
           required
+          show-size
+          chips
+          rounded
+          variant="outlined"
         ></v-text-field>
       </v-col>
 
@@ -80,6 +108,10 @@
           label="Tax Method *"
           :rules="[rules.required]"
           required
+          show-size
+          chips
+          rounded
+          variant="outlined"
         ></v-select>
       </v-col>
 
@@ -91,6 +123,10 @@
           placeholder="Enter Quantity"
           :rules="[rules.required]"
           required
+          show-size
+          chips
+          rounded
+          variant="outlined"
         ></v-text-field>
       </v-col>
 
@@ -99,7 +135,12 @@
           v-model="product.image"
           label="Image"
           accept="image/*"
-          prepend-icon="mdi-camera"
+          prepend-
+          show-size
+          chips
+          rounded
+          variant="outlined"
+          icon="mdi-camera"
         ></v-file-input>
       </v-col>
 
@@ -109,12 +150,18 @@
           label="Description / Product Details"
           auto-grow
           rows="2"
+          show-size
+          chips
+          rounded
+          variant="outlined"
         ></v-textarea>
       </v-col>
     </v-row>
 
-    <v-btn color="green-darken-1" class="mt-4" @click="submitForm"> Save Product </v-btn>
-    <v-btn color="red" class="mt-4 mx-2" @click="resetForm"> Reset </v-btn>
+    <v-card-actions class="justify-start mt-4">
+      <v-btn color="green-darken-2" class="ml-2" @click="submitForm" rounded> Save Product </v-btn>
+      <v-btn color="red-darken-1" variant="tonal" @click="resetForm" rounded> Reset </v-btn>
+    </v-card-actions>
   </v-form>
 </template>
 
