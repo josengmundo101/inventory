@@ -1,8 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
 import SearchBar from '../../components/SearchBar.vue'
-import CategoryTable from './components/CategoryTable.vue'
+import SalesTable from './component/SalesTable.vue'
 
 const searchQuery = ref('')
 </script>
@@ -10,10 +9,10 @@ const searchQuery = ref('')
 <template>
   <v-container class="px-15" fluid>
     <div class="mt-6 mb-8">
-      <h1 class="text-h4 font-weight-bold fade-in delay-50">Category List</h1>
+      <h1 class="text-h4 font-weight-bold fade-in delay-50">Sales List</h1>
       <p class="text-body-2 text-grey-darken-1 mt-2 fade-in delay-100">
-        Use category list as to describe your overall core business from the provided list. Click
-        the name of the category where you want to add a list item. .
+        Sales enables you to effectively control sales KPIs and monitor them in one central place
+        while helping teams to reach sales goals.
       </p>
     </div>
 
@@ -23,21 +22,15 @@ const searchQuery = ref('')
       </v-col>
 
       <v-col cols="12" sm="6" class="d-flex justify-end align-center">
-        <RouterLink to="categories/add"
+        <RouterLink to="sales/add"
           ><v-btn class="text-subtitle-1 font-weight-regular rounded-lg text-none" color="primary"
-            ><v-icon icon="mdi-package" start></v-icon>Add Category</v-btn
+            ><v-icon icon="mdi-package" start></v-icon>Add Sales</v-btn
           ></RouterLink
         >
       </v-col>
     </v-row>
     <div class="mb-5">
-      <CategoryTable />
+      <SalesTable />
     </div>
   </v-container>
 </template>
-
-<style scoped>
-.btn {
-  padding: 8px 24px;
-}
-</style>

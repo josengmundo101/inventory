@@ -4,7 +4,7 @@ import ReusableCartegoryForm from './reusableForm/reusableCartegoryForm.vue'
 
 <template>
   <v-container class="px-15" fluid>
-    <v-card class="pa-4" flat>
+    <v-card class="pa-4 border-sm" color="transparent" flat>
       <div class="mb-5 d-flex justify-space-between align-center">
         <v-card-title class="text-h4 font-weight-bold">Add Category</v-card-title>
         <RouterLink to="/admin/categories"

@@ -43,12 +43,17 @@ import GraphChart from './component/GraphChart.vue'
     </v-row>
 
     <!-- Middle Section: Stat Cards + Donut Chart -->
-    <v-row class="mt-6" dense no-gutter>
+    <v-row class="mt-6" dense>
       <v-col cols="12" md="6">
         <LowStock />
       </v-col>
       <v-col cols="12" md="6">
-        <v-card class="pa-4" height="100%" flat>
+        <v-card
+          class="pa-4 border-sm"
+          style="min-height: 220px; height: 100%"
+          color="transparent"
+          flat
+        >
           <div class="text-h5 font-weight-bold mb-2">Incidents Per Type</div>
           <GraphChart />
         </v-card>

@@ -3,9 +3,9 @@
     <v-card class="card mx-auto pa-12" elevation="15" width="500">
       <v-card-item class="text-center">
         <img :src="logo" alt="" width="150" class="mt-5" />
-        <v-card-title class="text-h4 text-white font-weight-bold"> Welcome Back </v-card-title>
+        <v-card-title class="text-h4 font-weight-bold"> Welcome Back </v-card-title>
 
-        <v-card-subtitle class="text-white">
+        <v-card-subtitle>
           Please enter you Account
           <RouterLink to="/register" />
         </v-card-subtitle>
@@ -32,9 +32,5 @@ import LoginForm from '@/components/LoginForm.vue'
 
 a {
   text-decoration: none;
-}
-.card {
-  background-color: #212121;
-  border-radius: 25px;
 }
 </style>

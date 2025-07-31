@@ -18,7 +18,7 @@
 
     <v-divider class="my-2 mr-2" color="grey-darken-4" />
 
-    <v-card class="mt-5 pa-12" flat>
+    <v-card class="mt-5 pa-12 border-sm" color="transparent" flat>
       <v-row>
         <!-- Product Image -->
         <v-col cols="12" md="4">
@@ -33,7 +33,7 @@
 
         <!-- Product Info Table -->
         <v-col cols="12" md="8">
-          <v-table density="compact">
+          <v-table class="custom-table" density="compact">
             <tbody>
               <tr v-for="(value, label) in productDetails" :key="label">
                 <td class="font-weight-medium text-grey-darken-1">{{ label }}</td>
@@ -55,7 +55,7 @@
         </v-col>
       </v-row>
       <v-col class="d-flex justify-end mt-4"
-        ><v-btn flat icon size="40" class="b-btn rounded-circle"
+        ><v-btn flat icon color="transparent" size="40" class="b-btn rounded-circle"
           ><RouterLink to="/admin/categories"
             ><v-icon start icon="mdi-arrow-left" /></RouterLink></v-btn
       ></v-col>
@@ -92,6 +92,10 @@ a {
 td {
   padding: 12px 16px !important;
   vertical-align: middle !important;
+}
+
+.custom-table {
+  background-color: transparent;
 }
 
 .b-btn {

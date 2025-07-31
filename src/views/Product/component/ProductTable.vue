@@ -1,7 +1,7 @@
 <template>
-  <v-card flat class="pa-5">
+  <v-card class="border-sm" color="transparent" flat>
     <div class="table-scroll">
-      <v-table density="comfortable" hover>
+      <v-table density="comfortable" hover class="custom-table">
         <thead>
           <tr>
             <th class="text-uppercase text-center">Image</th>
@@ -28,17 +28,17 @@
             <td class="pa-5 text-center">{{ item.unit }}</td>
             <td class="pa-5 text-center">{{ item.quantity }}</td>
             <td class="pa-5 text-center">
-              <v-btn class="rounded-xl" flat
+              <v-btn icon size="small" color="transparent" flat class="rounded-xl"
                 ><RouterLink to="products/view"
                   ><v-icon small class="text-primary">mdi-eye</v-icon></RouterLink
                 ></v-btn
               >
-              <v-btn class="rounded-xl" flat
+              <v-btn icon size="small" color="transparent" flat class="rounded-xl"
                 ><RouterLink to="products/edit"
                   ><v-icon small class="text-warning">mdi-pencil</v-icon></RouterLink
                 ></v-btn
               >
-              <v-btn class="rounded-xl" flat
+              <v-btn icon size="small" color="transparent" flat class="rounded-xl"
                 ><RouterLink>
                   <v-icon small class="text-error">mdi-delete</v-icon></RouterLink
                 ></v-btn
@@ -123,5 +123,25 @@ const products = ref([
 .table-scroll {
   max-height: 500px; /* adjust based on your layout */
   overflow-y: auto;
+}
+
+.custom-table {
+  background-color: transparent;
+}
+
+.custom-table thead {
+  background-color: rgba(46, 46, 46, 0.05); /* soft separation */
+}
+
+.custom-table th {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #151515;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 </style>

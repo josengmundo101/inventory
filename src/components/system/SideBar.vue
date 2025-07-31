@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer
-    color="grey-darken-4"
+    color="grey-lighten-4"
     v-model="drawerLocal"
     @update:modelValue="emit('update:drawer', $event)"
     app
@@ -16,6 +16,7 @@
         :key="item.title"
         :to="item.to"
         :prepend-icon="item.icon"
+        :class="{ 'active-link': $route.path === item.to }"
       >
         {{ item.title }}
       </v-list-item>
@@ -32,6 +33,7 @@
           :to="child.to"
           :title="child.title"
           :prepend-icon="child.icon"
+          :class="{ 'active-link': $route.path === child.to }"
         />
       </v-list-group>
     </v-list>
@@ -79,3 +81,11 @@ watch(
   },
 )
 </script>
+
+<style scoped>
+.active-link {
+  background-color: #90085d !important;
+  border-radius: 15px !important;
+  color: white !important;
+}
+</style>

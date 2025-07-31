@@ -159,8 +159,12 @@
     </v-row>
 
     <v-card-actions class="justify-start mt-4">
-      <v-btn color="green-darken-2" class="ml-2" @click="submitForm" rounded> Save Product </v-btn>
-      <v-btn color="red-darken-1" variant="tonal" @click="resetForm" rounded> Reset </v-btn>
+      <v-btn color="green-darken-2" class="btn ml-2" @click="submitForm" rounded>
+        Save Product
+      </v-btn>
+      <v-btn color="red-darken-1" class="btn" variant="tonal" @click="resetForm" rounded>
+        Reset
+      </v-btn>
     </v-card-actions>
   </v-form>
 </template>
@@ -223,3 +227,9 @@ function resetForm() {
   }
 }
 </script>
+
+<style scoped>
+.btn {
+  background-color: #dbe1db;
+}
+</style>

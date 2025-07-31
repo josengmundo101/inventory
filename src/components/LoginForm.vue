@@ -1,24 +1,16 @@
 <template>
   <v-form class="pa-2" @submit.prevent>
-    <v-text-field
-      class="text-field text-white"
-      v-model="email"
-      :rules="rules"
-      label="Email"
-      variant="outlined"
-    ></v-text-field>
+    <v-text-field v-model="email" :rules="rules" label="Email" variant="outlined"></v-text-field>
 
     <v-text-field
       hint="Enter your password to access this website"
-      class="text-white"
-      color="gray-lighten-1"
       v-model="password"
       label="Password"
       type="input"
       variant="outlined"
     ></v-text-field>
 
-    <v-btn class="mt-2" type="submit" color="primary" block>Submit</v-btn>
+    <v-btn class="submit-btn mt-2 text-white rounded-xl" type="submit" block>Login</v-btn>
   </v-form>
 </template>
 
@@ -30,4 +22,8 @@ const password = ref('')
 const rules = [] // Define your validation rules here
 </script>
 
-<style scoped></style>
+<style scoped>
+.submit-btn {
+  background-color: #181919; /* Vuetify primary color */
+}
+</style>
