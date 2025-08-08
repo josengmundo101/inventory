@@ -11,6 +11,7 @@ import AddCategory from '@/views/Categories/components/AddCategory.vue'
 import ViewCategory from '@/views/Categories/components/ViewCategory.vue'
 import EditCategory from '@/views/Categories/components/EditCategory.vue'
 import SalesPage from '@/views/Sales/SalesPage.vue'
+import AddSales from '@/views/Sales/component/AddSales.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,7 +39,7 @@ const router = createRouter({
         { path: 'categories/edit', name: 'edit-categories', component: EditCategory },
         // Sales routes
         { path: 'sales', name: 'sales', component: SalesPage },
-        { path: 'sales/add', name: 'add-sales', component: SalesPage },
+        { path: 'sales/add', name: 'add-sales', component: AddSales },
       ],
     },
   ],
